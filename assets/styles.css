@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Loved+by+the+King&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat';
+    user-select: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/9/9/4/3/1503499_8efaf.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+.title {
+    background: black;
+    border-radius: 10px;
+    padding: 0 3.75rem;
+    color: white;
+    text-align: center;
+}
+
+section {
+    gap: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 1.25rem 2.825rem;
+    margin-inline: 2rem;
+    cursor: pointer;
+    font-size: 1.75rem;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 105, 105);
+    border: .25rem dashed black;
+    transition: all .3s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+button::after {
+    opacity: 0;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 75, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    border: none;
+}
+
+.button-yes::after {
+    content: "💝";
+}
+
+.button-no::after {
+    content: "💔";
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+button:hover {
+    background: rgb(255, 75, 75);
+}
+
+@media (max-width: 568px) {
+    body {
+        background-image: url('https://img1.picmix.com/output/stamp/normal/9/9/4/3/1503499_8efaf.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    button {
+        padding: 1.25rem 2.825rem;
+        margin-inline: 0;
+        cursor: pointer;
+        font-size: 1.5rem;
+        outline: none;
+        border: none;
+        background-color: rgb(255, 105, 105);
+        border: .25rem dashed black;
+        transition: all .3s;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    div#buttonWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .title {
+        background: black;
+        border-radius: 10px;
+        padding: 0 1.75rem;
+        margin-inline: auto;
+        color: white;
+        text-align: center;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+}
